@@ -2,7 +2,6 @@
 .DS_Store
 *~
 *#
-*.vcxproj.user
 *.VC.db
 *.dylib
 *.sd
