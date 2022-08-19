@@ -2,13 +2,13 @@
 
 This is the TF2 SauRay plugin for SourceMod.
 
-For more information please visit: [honestgaming.io](https://honestgaming.io/).
+For more information please visit: [sauray.tech](http://sauray.tech).
 
-This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay binary. For the binary, [contact us](https://honestgaming.io/contact.html) directly.
+This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay binary. For the binary, [contact us](http://sauray.tech) directly.
 
 # Features
 
-* Accurate anti-wallhack (tackles dependent visibility and much more: see [here](https://honestgaming.io/sauray.html) for more details).
+* Accurate anti-wallhack (tackles dependent visibility and much more: see [here](http://sauray.tech) for more details).
 * Ultra-high-latency support via specialized lookaheads
 * Sound origin randomization
 * Supports instances with more than one daemon (see [Server launch procedure](#server-launch-procedure))
