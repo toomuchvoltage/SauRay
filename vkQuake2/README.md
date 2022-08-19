@@ -1,7 +1,7 @@
 # vkQuake2 with SauRay(TM) integration
-This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay(TM)](https://www.honestgaming.io/#demonstrationPage) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
+This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay(TM)](http://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
 
-We are releasing this to be GPL-compatible (in case we release binaries) and to show the modifications required to make Quake II wall-hack free using SauRay(TM). If you would like to compile this, please reach out to us [directly](https://www.honestgaming.io/#contactPage) to get a copy of ``HighOmega.lib`` to compile against. It should be placed in ``ext/lib``.
+We are releasing this to be GPL-compatible (in case we release binaries) and to show the modifications required to make Quake II wall-hack free using SauRay(TM). If you would like to compile this, please reach out to us [directly](http://www.sauray.tech) to get a copy of ``HighOmega.lib`` to compile against. It should be placed in ``ext/lib``.
 
 # Describing our Usage
 In this section we will highlight all the changes we made to the code for our integration. Please note that for this demo we didn't handle dynamic entities such as doors. This is to demonstrate API usage in its most basic sense.
@@ -9,7 +9,7 @@ In this section we will highlight all the changes we made to the code for our in
 ## Header include
 The header file we needed in order integrate with Quake II was less than 40 lines with ultimately only 8 API calls necessary:
 
-[sauray.h](https://github.com/HonestGamingInc/vkQuake2_SauRay/blob/master/ext/include/sauray.h)
+[sauray.h](https://github.com/toomuchvoltage/SauRay/tree/master/vkQuake2/ext/include/sauray.h)
 
 We include ``sauray.h`` at the top of ``server.h``. Being that our solution is server-side only this is the only place we will need to include.
 
@@ -321,9 +321,9 @@ Finally we craft individual obfuscated audio sources for each recipient:
 ```
 
 # And that's it!
-Thanks for reading. Again, if you have any questions, don't hesitate to [reach out](https://www.honestgaming.io/#contactPage).
+Thanks for reading. Again, if you have any questions, don't hesitate to [reach out](http://www.sauray.tech).
 
-If you'd like to keep your eyes peeled for updates, follow us on [Twitter](https://twitter.com/HonestGamingInc/).
+If you'd like to keep your eyes peeled for updates, follow us on [Twitter](https://twitter.com/antiwallhack/).
 
 # Additional thanks
 Help from [Paril](https://github.com/Paril) from [QuakeLegacy](https://quakelegacy.com/) was instrumental in getting this demo out in record time.
