@@ -4,7 +4,7 @@ This is the CSGO SauRay plugin for SourceMod.
 
 For more information please visit: [sauray.tech](http://sauray.tech).
 
-This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay binary. For the binary, [contact us](https://honestgaming.io/contact.html) directly.
+This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay binary. For the binary, [contact us](http://sauray.tech) directly.
 
 # Features
 
