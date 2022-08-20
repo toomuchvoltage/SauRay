@@ -11,7 +11,7 @@ public Plugin myinfo =
 	author =		"Baktash Abdollah-shamshir-saz",
 	description =	"SauRay(TM) Anti-wallhack",
 	version =		"1.0.0.0",
-	url =			"https://www.honestgaming.io"
+	url =			"http://www.sauray.tech"
 };
 
 native void SauraySetDebug(int windowNumber, int width, int height);
