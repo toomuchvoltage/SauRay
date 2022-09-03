@@ -440,7 +440,7 @@ public void OnGameFrame()
 							curUp[0], curUp[1], curUp[2],
 							futLook[0], futLook[1], futLook[2],
 							futUp[0], futUp[1], futUp[2],
-							106.0, playerLatency > 0.1 ? 1.8 : 1.7777778); // Signal to do a 360 check in shader
+							106.0, playerLatency > 0.128 ? 1.8 : 1.7777778); // Signal to do a 360 check in shader
 
 			playerSnapshots[i].lastOrigX = curEye[0];
 			playerSnapshots[i].lastOrigY = curEye[1];
