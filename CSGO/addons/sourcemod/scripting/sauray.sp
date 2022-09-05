@@ -35,6 +35,7 @@ native void SaurayResetRound(int windowNumber);
 native void SaurayCreateSmoke(int windowNumber, float ox, float oy, float oz);
 
 bool visibilityMatrix[(MAXPLAYERS + 1) * (MAXPLAYERS + 1)] = {true, ...};
+int rttMissCount[MAXPLAYERS + 1] = {0, ...};
 bool playerBlind[MAXPLAYERS + 1] = {false, ...};
 bool playerActive[MAXPLAYERS + 1] = {false, ...};
 bool launchedOnce = false;
@@ -348,7 +349,18 @@ public void OnGameFrame()
 			float playerLatency = 0.03;
 			if (!playerFake) playerLatency = GetClientLatency(i, NetFlow_Both);
 
-			if ( !highPingAllowed && !playerFake && playerLatency > 0.128 ) KickClient (i, "You need a RTT below 128ms");
+			if ( !highPingAllowed && !playerFake && playerLatency > 0.128 )
+			{
+				rttMissCount[i]++;
+				if ( rttMissCount[i] % 100 == 0 ) PrintCenterText (i, "You need an RTT below 128ms. Warning: %d/5", (rttMissCount[i] / 100) + 1);
+				if (rttMissCount[i] == 500)
+				{
+					KickClient (i, "You need a RTT below 128ms");
+					rttMissCount[i] = 0;
+				}
+			}
+			else
+				rttMissCount[i] = 0;
 			
 			char weaponName[50];
 			float heldWeaponLen = 32.0;
@@ -440,7 +452,7 @@ public void OnGameFrame()
 							curUp[0], curUp[1], curUp[2],
 							futLook[0], futLook[1], futLook[2],
 							futUp[0], futUp[1], futUp[2],
-							106.0, playerLatency > 0.128 ? 1.8 : 1.7777778); // Signal to do a 360 check in shader
+							106.0, (playerLatency > 0.128 && highPingAllowed) ? 1.8 : 1.7777778); // Signal to do a 360 check in shader
 
 			playerSnapshots[i].lastOrigX = curEye[0];
 			playerSnapshots[i].lastOrigY = curEye[1];
@@ -458,6 +470,7 @@ public void OnGameFrame()
 			{
 				SaurayRemovePlayer(windowNum, i - 1);
 			}
+			rttMissCount[i] = 0;
 		}
 		playerActive[i] = curPlayerActive;
 	}
@@ -529,6 +542,7 @@ public void OnClientDisconnect(int i)
 {
 	SDKUnhook(i, SDKHook_SetTransmit, VisCheckAction);
 	playerBlind[i] = false;
+	rttMissCount[i] = 0;
 }
 
 public bool IsVisible(int viewer, int subject)
