@@ -42,9 +42,9 @@
 #define SMEXT_CONF_DESCRIPTION	"SauRay(TM) Anti-wallhack"
 #define SMEXT_CONF_VERSION		"1.0.0.0"
 #define SMEXT_CONF_AUTHOR		"Baktash Abdollah-shamshir-saz"
-#define SMEXT_CONF_URL			"https://www.honestgaming.io"
+#define SMEXT_CONF_URL			"http://sauray.tech"
 #define SMEXT_CONF_LOGTAG		"SAMPLE"
-#define SMEXT_CONF_LICENSE		"GPL"
+#define SMEXT_CONF_LICENSE		"COMMERCIAL"
 #define SMEXT_CONF_DATESTRING	__DATE__
 
 /** 
