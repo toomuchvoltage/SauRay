@@ -6,3 +6,7 @@
 	path = CSGO/HighOmega
 	url = https://github.com/toomuchvoltage/HighOmega-public
 	branch = sauray_ipc_csgo
+[submodule "TF2/HighOmega"]
+	path = TF2/HighOmega
+	url = https://github.com/toomuchvoltage/HighOmega-public
+	branch = sauray_ipc_tf2

@@ -1,10 +1,10 @@
 # Introduction
 
-This is the TF2 SauRay plugin for SourceMod.
+This is the TF2 SauRay<sup>TM</sup> plugin for SourceMod.
 
 For more information please visit: [sauray.tech](http://sauray.tech).
 
-This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay binary. For the binary, [contact us](http://sauray.tech) directly.
+This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay<sup>TM</sup> binary. Open the `HighOmega` submodule for building the core SauRay<sup>TM</sup> binary.
 
 # Features
 
@@ -12,7 +12,7 @@ This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication
 * Ultra-high-latency support via specialized lookaheads
 * Sound origin randomization
 * Supports instances with more than one daemon (see [Server launch procedure](#server-launch-procedure))
-* A simple pipeline for map conversion to SauRay consumable form (see [Content preparation pipeline](#content-preparation-pipeline))
+* A simple pipeline for map conversion to SauRay<sup>TM</sup> consumable form (see [Content preparation pipeline](#content-preparation-pipeline))
 
 # Potential features (will be implemented with sufficient demand)
 
@@ -68,7 +68,7 @@ Place it in the following command to launch your server while allowing community
 
 ```start srcds.exe -console -port 27020 -game tf +sv_pure 1 +map koth_badlands +maxplayers 13 +sauray_config_file sauray +sv_setsteamaccount THISGSLTHERE```
 
-The `+sauray_config_file sauray` command line option provides to ability to specify which SauRay configuration this daemon will utilize. Each individual daemon will communicate with a different SauRay instance. The option `sauray_window_num` inside the configuration file specifies the target SauRay window.
+The `+sauray_config_file sauray` command line option provides to ability to specify which SauRay<sup>TM</sup> configuration this daemon will utilize. Each individual daemon will communicate with a different SauRay<sup>TM</sup> instance. The option `sauray_window_num` inside the configuration file specifies the target SauRay<sup>TM</sup> window.
 
 # Content preparation pipeline
 
@@ -79,11 +79,12 @@ The `+sauray_config_file sauray` command line option provides to ability to spec
     * `io_import_vmf` (original repo: [https://github.com/lasa01/io_import_vmf](https://github.com/lasa01/io_import_vmf))
 4. Configure the `import vmf` plugin to detect your game content directory from your `steamapps` folder.
 5. Import the decompiled `VMF` in step one
-6. Remove windows and doors. (Door support is reserved for future releases). If any models are missing add simple non-conservative occluders for them manually. Non-conservative occluders refer to ones that fit 'inside' the original object.
+6. Remove windows and doors. (Door support is reserved for future releases). If any models are missing add simple non-conservative occluders for them manually. Non-conservative occluders refer to ones that fit 'inside' the original object. Ensure to place a single sun lamp to signify the sun direction in the map.
 7. Export to `.OBJ`
 8. Install [Blender 2.79](https://download.blender.org/release/Blender2.79/)
 9. Install the export plugin provided in `content_pipeline\exporter` for the **2.79 install**.
-10. Import `.OBJ` and export to `.TXT` from the 2.79 install. Ensure to place a single sun lamp to signify the sun direction in the map. This file is consumable by SauRay.
+10. Import `.OBJ` and export to `.TXT` from the 2.79 install.
+11. The produced `.TXT` file should be placed in HighOmega's folder `assets/maps/tf2` as directed [here](https://github.com/toomuchvoltage/HighOmega-public/tree/sauray_ipc_tf2#extracted-maps).
 
 # Known limitations
 
