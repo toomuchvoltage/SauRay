@@ -92,7 +92,7 @@ The `+sauray_config_file sauray` command line option provides to ability to spec
 
 # Known limitations
 
-* As of this release, weapon reload sounds emanate from last known player locations. This can be problematic during high-stakes matches as players can wander off considerably from their last known locations before initiating a weapon reload. This was addressed in our [vkQuake2](https://github.com/HonestGamingInc/vkQuake2_SauRay) port by always transmitting audio origins rather than relying on entity locations. A similar fix in SourceMod would require further modifications to server logic.
+* As of this release, weapon reload sounds emanate from last known player locations. This can be problematic during high-stakes matches as players can wander off considerably from their last known locations before initiating a weapon reload. This was addressed in our [vkQuake2](https://github.com/toomuchvoltage/SauRay/tree/master/vkQuake2) port by always transmitting audio origins rather than relying on entity locations. A similar fix in SourceMod would require further modifications to server logic.
 * Radar data will be randomized laterally. This is due to how CSGO consumes radar data. More specifically, radar coordinates are broadcasted and coordinate elevation is used client-side to provide vertical proximity hints to players. Ideally those hints should be packed as flags and (only 2D) radar data should be unicasted to individual players.
 * Very infrequent flashing of players in wrong locations. Root cause(s) are uncertain at this time.
 
