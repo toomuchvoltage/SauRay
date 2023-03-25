@@ -1,7 +1,7 @@
 # vkQuake2 with SauRay(TM) integration
 This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay(TM)](http://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
 
-We are releasing this to be GPL-compatible (in case we release binaries) and to show the modifications required to make Quake II wall-hack free using SauRay(TM). If you would like to compile this, please reach out to us [directly](http://www.sauray.tech) to get a copy of ``HighOmega.lib`` to compile against. It should be placed in ``ext/lib``.
+Initialize the submodule `HighOmega` and compile it via the instructions found [here](https://github.com/toomuchvoltage/HighOmega-public/tree/sauray_vkquake2). The compiled `HighOmega.lib` should be placed in `ext/lib`.
 
 # Describing our Usage
 In this section we will highlight all the changes we made to the code for our integration. Please note that for this demo we didn't handle dynamic entities such as doors. This is to demonstrate API usage in its most basic sense.

@@ -1,0 +1,4 @@
+[submodule "vkQuake2/HighOmega"]
+	path = vkQuake2/HighOmega
+	url = https://github.com/toomuchvoltage/HighOmega-public/
+	branch = sauray_vkquake2
