@@ -1,5 +1,5 @@
-# vkQuake2 with SauRay(TM) integration
-This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay(TM)](http://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
+# vkQuake2 with SauRay<sup>TM</sup> integration
+This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay<sup>TM</sup>](http://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
 
 Initialize the submodule `HighOmega` and compile it via the instructions found [here](https://github.com/toomuchvoltage/HighOmega-public/tree/sauray_vkquake2). The compiled `HighOmega.lib` should be placed in `ext/lib`.
 
@@ -55,7 +55,7 @@ In ``R_BeginRegistration ()`` in ``vk_model.c`` we have the following to cache g
 ```
 
 ## Start-up
-At the end of ``SV_SpawnServer ()`` in ``sv_init.c`` we have the following lines. This starts SauRay(TM) with a maximum of 4 players, each with a primary trace resolution of 640x640 and with a temporal history of 2 frames. Following that, it loads up the map geometry cached earlier.
+At the end of ``SV_SpawnServer ()`` in ``sv_init.c`` we have the following lines. This starts SauRay<sup>TM</sup> with a maximum of 4 players, each with a primary trace resolution of 640x640 and with a temporal history of 2 frames. Following that, it loads up the map geometry cached earlier.
 
 ```
 	...
@@ -70,9 +70,9 @@ At the end of ``SV_SpawnServer ()`` in ``sv_init.c`` we have the following lines
 ```
 
 ## Player feeding
-We need to feed player geom and vantage points based on both current and historical data in ``SV_Frame ()`` in ``sv_main.c``. The heavy lifting of actual projection work happens inside SauRay(TM). Following that we need to kick off the visibility tests.
+We need to feed player geom and vantage points based on both current and historical data in ``SV_Frame ()`` in ``sv_main.c``. The heavy lifting of actual projection work happens inside SauRay<sup>TM</sup>. Following that we need to kick off the visibility tests.
 
-If you'd like high ping players to be allowed with SauRay's laggy player support, type ``cvar_highping_allowed 1`` on the server's console. The threshold is currently set at pings >128ms.
+If you'd like high ping players to be allowed with SauRay<sup>TM</sup>'s laggy player support, type ``cvar_highping_allowed 1`` on the server's console. The threshold is currently set at pings >128ms.
 Please note that this is not preferred for competitive matches and is to only allow lagging players in a non-critical context due to its additional leakage to suppress popping. Best to be combined with fake high-latency detection mechanisms such as comparing successive client hop latencies retrived from a ``tracert``.
 ```
 	...
@@ -185,7 +185,7 @@ Don't forget to handle players that leave in ``SV_DropClient()`` in ``sv_main.c`
 ```
 
 ## Packet filtering
-``SV_BuildClientFrame()`` in ``sv_ents.c`` builds client updates to send out over the network. A lot of Quake's own PVS work happens in here. We need to do our own more accurate PVS work here using SauRay(TM):
+``SV_BuildClientFrame()`` in ``sv_ents.c`` builds client updates to send out over the network. A lot of Quake's own PVS work happens in here. We need to do our own more accurate PVS work here using SauRay<sup>TM</sup>:
 
 ```
 	...
