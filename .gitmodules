@@ -2,3 +2,7 @@
 	path = vkQuake2/HighOmega
 	url = https://github.com/toomuchvoltage/HighOmega-public/
 	branch = sauray_vkquake2
+[submodule "CSGO/HighOmega"]
+	path = CSGO/HighOmega
+	url = https://github.com/toomuchvoltage/HighOmega-public
+	branch = sauray_ipc_csgo
