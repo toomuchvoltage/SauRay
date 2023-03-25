@@ -1,6 +1,6 @@
 # Introduction
 
-This is the CSGO SauRay plugin for SourceMod.
+This is the CSGO SauRay<sup>TM</sup> plugin for SourceMod.
 
 For more information please visit: [sauray.tech](http://sauray.tech).
 
@@ -15,7 +15,7 @@ This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication
 * Sound origin (footsteps, gunfire) randomization
 * Radar data randomization
 * Supports instances with more than one daemon (see [Server launch procedure](#server-launch-procedure))
-* A simple pipeline for map conversion to SauRay consumable form (see [Content preparation pipeline](#content-preparation-pipeline))
+* A simple pipeline for map conversion to SauRay<sup>TM</sup> consumable form (see [Content preparation pipeline](#content-preparation-pipeline))
 
 # Potential features (will be implemented with sufficient demand)
 
@@ -72,7 +72,7 @@ Place it in the following command to launch your server while allowing community
 
 ```start srcds.exe -maxplayers_override 10 -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active +map de_nuke +sauray_config_file sauray +sv_setsteamaccount THISGSLTHERE```
 
-The `+sauray_config_file sauray` command line option provides to ability to specify which SauRay configuration this daemon will utilize. Each individual daemon will communicate with a different SauRay instance. The option `sauray_window_num` inside the configuration file specifies the target SauRay window.
+The `+sauray_config_file sauray` command line option provides to ability to specify which SauRay<sup>TM</sup> configuration this daemon will utilize. Each individual daemon will communicate with a different SauRay<sup>TM</sup> instance. The option `sauray_window_num` inside the configuration file specifies the target SauRay<sup>TM</sup> window.
 
 # Content preparation pipeline
 
