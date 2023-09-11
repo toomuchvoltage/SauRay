@@ -1,5 +1,5 @@
 # vkQuake2 with SauRay<sup>TM</sup> integration
-This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay<sup>TM</sup>](http://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
+This is a fork of [vkQuake2](https://github.com/kondrak/vkQuake2) with [SauRay<sup>TM</sup>](https://www.sauray.tech) integration. Much thanks to [Krzysztof Kondrak](https://twitter.com/k_kondrak) for the original modernized Vulkan port.
 
 Initialize the submodule `HighOmega` and compile it via the instructions found [here](https://github.com/toomuchvoltage/HighOmega-public/tree/sauray_vkquake2). The compiled `HighOmega.lib` should be placed in `ext/lib`.
 

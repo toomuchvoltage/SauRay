@@ -2,7 +2,7 @@
 
 This is the TF2 SauRay<sup>TM</sup> plugin for SourceMod.
 
-For more information please visit: [sauray.tech](http://sauray.tech).
+For more information please visit: [sauray.tech](https://sauray.tech).
 
 This plugin uses [IPC](https://en.wikipedia.org/wiki/Inter-process_communication) to communicate with the core SauRay<sup>TM</sup> binary. Open the `HighOmega` submodule for building the core SauRay<sup>TM</sup> binary.
 
