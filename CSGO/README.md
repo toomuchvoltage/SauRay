@@ -1,3 +1,5 @@
+# This is now archived as CS:GO has been overwritten by CS2
+
 # Introduction
 
 This is the CSGO SauRay<sup>TM</sup> plugin for SourceMod.
