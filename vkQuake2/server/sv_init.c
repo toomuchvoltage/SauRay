@@ -276,7 +276,7 @@ void SV_SpawnServer (char *server, char *spawnpoint, server_state_t serverstate,
 	// set serverinfo variable
 	Cvar_FullSet ("mapname", sv.name, CVAR_SERVERINFO | CVAR_NOSET);
 
-	sauray_start(4, 640, 2);
+	sauray_start(4, 640, 2, 1);
 	sauray_feedmap_quake2(sv.name);
 
 	Com_Printf ("-------------------------------------\n");

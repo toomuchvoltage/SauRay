@@ -10,7 +10,7 @@ extern "C" {
 	extern unsigned int sauray_debug_w;
 	extern unsigned int sauray_debug_h;
 	void sauray_setdebug(unsigned int debug_w, unsigned int debug_h);
-	int sauray_start(unsigned int max_players, unsigned int player_trace_res, unsigned int sauray_temporal_history_amount);
+	int sauray_start(unsigned int max_players, unsigned int player_trace_res, unsigned int sauray_temporal_history_amount, int sauray_threaded_mode);
 	int sauray_feedmap_quake2(char *mapName);
 	void sauray_player_quake2(unsigned int player_id,
 		float absmin_x, float absmin_y, float absmin_z,
@@ -28,8 +28,8 @@ extern "C" {
 		float randDistance, float updateDistanceThreshold);
 	void sauray_remove_player(unsigned int player);
 	int sauray_loop();         // Non-threaded mode..
-	int sauray_thread_start(); // Threaded mode...
-	int sauray_thread_join();
+	int sauray_thread_signal(); // Threaded mode...
+	int sauray_thread_wait();
 
 #ifdef __cplusplus
 }

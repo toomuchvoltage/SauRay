@@ -868,7 +868,7 @@ void SV_Frame (int msec)
 			futAngle[0], futAngle[1], futAngle[2],
 			cl->edict->client->ps.fov, isPlayerLagging ? 1.8f : 1.77777778f);
 	}
-	sauray_thread_start();
+	sauray_thread_signal();
 
 	// update ping based on the last known frame from all clients
 	SV_CalcPings ();
@@ -879,7 +879,7 @@ void SV_Frame (int msec)
 	// let everything in the world think and move
 	SV_RunGameFrame ();
 
-	sauray_thread_join();
+	sauray_thread_wait();
 
 	// send messages back to the clients that had packets read this frame
 	SV_SendClientMessages ();
