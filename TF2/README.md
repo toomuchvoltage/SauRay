@@ -1,3 +1,5 @@
+# TF2 upgraded to 64-bit, breaking all native extensions (including SauRay's). This is here for archival purposes only.
+
 # Introduction
 
 This is the TF2 SauRay<sup>TM</sup> plugin for SourceMod.
